@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Viaoda+Libre&display=swap');
+   /* Apply the font to the body and other elements */
+   body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #FFF0DC;
+}
+.title h1 {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 3.5rem; /* Adjust as needed */
+    color: #A294F9; /* Blue text color */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin-left: -5%;
+}
+
+.graph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.months {
+display: grid;
+grid-template-columns: repeat(13, 30px); /* Adjust for larger spacing */
+justify-content: start;
+grid-gap: 1px; /* Add gap between months */
+margin-bottom: 0;
+margin-left: -8%;
+text-align: center;
+}
+.months span {
+display: inline-block;
+width: 30px;
+height: 30px;
+}
+.days-container {
+    display: flex;
+    align-items: start;
+}
+.day-numbers {
+    display: grid;
+    grid-template-rows: repeat(31, 30px);
+    grid-gap: 0;
+    margin-right: 5px;
+    margin-top: 2%;
+}
+.days {
+    display: grid;
+    grid-template-columns: repeat(13, 30px); /* 13 columns to match the months row */
+    grid-template-rows: repeat(31, 30px);
+    grid-gap: 0;
+}
+.day {
+    width: 30px;
+    height: 30px;
+    background-color: #ebedf0;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.day:hover {
+    stroke: #333;
+    stroke-width: 1px;
+}
+.legend-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the legend items */
+    margin-left: 20px;
+    max-width: 220px;
+    margin-top: 30%;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: left; /* Align the text to the left */
+}
+
+.legend-color {
+    width: 30px;  /* Match the width of the days in the grid */
+    height: 30px; /* Match the height of the days in the grid */
+    margin-right: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 1px solid black; /* Add the same border style as the days */
+    display: inline-block;
+    margin-top: 10%;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left of the color box */
+}
+
+.low { background-color: #F5EFFF; }
+.medium { background-color: #E5D9F2; }
+.high { background-color: #CDC1FF; }
+.very-high { background-color: #A294F9; }
+
+.clear-button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #FF8383;
+    color: white;
+    border: 2px solid transparent; /* Initially, set border to transparent */
+    border-radius: 4px;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 10px;
+    margin-left: -6%;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.clear-button:hover {
+    background-color: transparent;
+    border-color: #FF8383; /* Change the border color on hover */
+    color: #FF8383;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Contribution Graph</title>
+    <link rel="icon" href="code.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title"> <h1>Coding Tracker</h1></div>
+    <div class="graph-container">
+        <div class="months">
+            <span>D</span> <span>J</span> <span>F</span> <span>M</span> <span>A</span> <span>M</span> <span>J</span> <span>J</span> <span>A</span> <span>S</span> <span>O</span> <span>N</span> <span>D</span>
+        </div>
+        <div class="days-container">
+            <div class="day-numbers" id="dayNumbers"></div>
+            <div class="days" id="contributionGrid"></div>
+            <div class="legend-container">
+                <div class="legend" id="legend">
+                    <div><div class="legend-color low" data-color="1"></div> Low</div>
+                    <div><div class="legend-color medium" data-color="2"></div> Medium</div>
+                    <div><div class="legend-color high" data-color="3"></div> High</div>
+                    <div><div class="legend-color very-high" data-color="4"></div> Very High</div>
+                </div>
+            </div>
+        </div>
+        <button class="clear-button" id="clearGrid">Clear Grid</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
